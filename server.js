@@ -25,7 +25,7 @@ const log = console.log;
 const PORT = process.env.PORT || 8080; // Step 1
 
 
-// Step 2
+//  Step 2
 const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017/birthday';
 mongoose.connect( uri, {
     useNewUrlParser: true
