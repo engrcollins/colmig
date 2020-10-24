@@ -5,7 +5,7 @@ const UserSchema = new Schema({
     msgTitle: String,
     name: String,
     msgContent: String,
-    date: Date
+    date: String
 });
 
 const User = mongoose.model('User', UserSchema);

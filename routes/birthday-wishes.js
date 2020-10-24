@@ -11,12 +11,13 @@ router.post('/add', async (req, res) => {
         });
     }
     const { name, msgTitle, msgContent } = req.body;
-
+    let x = new Date();
+    console.log(x.toDateString())
     const newUser = new User({
         msgTitle,
         name,
         msgContent,
-        date: Date.now()
+        date: x.toDateString()
     });
     console.log(newUser)
     try {
@@ -39,7 +40,7 @@ router.post('/add', async (req, res) => {
 
 router.get('/', async (req, res) => {
     try {
-        const users = await User.find({});
+        const users = await User.find({}).sort({date:1});
         console.log(typeof users)
         return res.json(
             users
