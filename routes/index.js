@@ -11,9 +11,6 @@ router.post('/add', async (req, res) => {
         });
     }
     const { name, position, company } = req.body;
-    let presentDate = new Date
-    presentDate = presentDate.toDateString();
-    console.log(presentDate);
     const newUser = new User({
         position,
         name,
