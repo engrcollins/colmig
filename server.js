@@ -6,7 +6,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require("cors");
-var whitelist = ['http://localhost:3000', 'http://localhost:8080', 'http://localhost:8000', 
+var whitelist = ['http://localhost:3000', 'http://localhost:8080', 'http://localhost:8000', 'https://wura.netlify.app'
                 'https://collinsakinbami.netlify.app', 'https://birthday-app-fullstack.herokuapp.com', 'https://colmig-app.herokuapp.com'];
 var corsOptions = {
   origin: function (origin, callback) {
